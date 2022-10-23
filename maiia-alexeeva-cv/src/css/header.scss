@@ -1,3 +1,5 @@
+@use "variables.scss" as variables;
+
 .header {
   padding: 0 50px;
   position: fixed;
@@ -12,8 +14,15 @@
   justify-content: space-between;
   align-items: center;
 
+  &-name {
+    color: variables.$white-text;
+    text-decoration: inherit;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
   &-download-btn {
-    border: 1px solid #fff;
+    border: 1px solid variables.$white-text;
     padding: 15px 20px;
     border-radius: 80px;
     min-width: 120px;

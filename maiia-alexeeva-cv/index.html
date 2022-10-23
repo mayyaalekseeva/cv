@@ -13,6 +13,192 @@
   <body>
     <div id="app"></div>
 
+    <!-- Container -->
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-name">
+          <span>Maiia Alexeeva</span>
+        </div>
+        <!-- Burger Menu Button -->
+        <a href="#" class="menu-btn"> </a>
+
+        <!-- Side Menu -->
+        <div class="menu">
+          <nav class="menu-container">
+            <ul class="menu-list">
+              <li class="menu-list__item"><a href="#">About</a></li>
+              <li class="menu-list__item">
+                <a href="/#section-skills">Coding Skills</a>
+              </li>
+              <li class="menu-list__item">
+                <a href="/#section-exp">Experience</a>
+              </li>
+              <li class="menu-list__item">
+                <a href="/#section-education">Education</a>
+              </li>
+              <li class="menu-list__item">
+                <a href="/#section-portfolio">Portfolio</a>
+              </li>
+              <li class="menu-list__item">
+                <a href="/#section-contacts">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Download CV Button -->
+        <a href="#" class="header-download-btn" target="_blank">
+          <span>Download CV</span>
+          <i class="icon fas fa-download"></i>
+        </a>
+      </header>
+
+      <!-- Content Wrapper -->
+      <div class="content-wrp">
+        <!-- Aside Photo -->
+        <aside class="aside-photo">
+          <div class="aside-photo__img"></div>
+        </aside>
+
+        <!-- Sections Wrapper -->
+        <div class="sections-wrp">
+          <!-- Home Section -->
+          <section class="section home" id="section-home">
+            <div class="home__title">
+              <h3>Maiia Alexeeva</h3>
+              <h4>Front-end Developer</h4>
+            </div>
+
+            <h4 class="subtitle">About Me</h4>
+
+            <p class="home__greeting">
+              Hello! I am Front-end Developer from Russia, Nizhny Novgorod. I
+              have over 2 years of develpment experience and passion for new
+              technologies in web
+            </p>
+
+            <div class="home-buttons">
+              <a href="#section-contacts" class="home-buttons__contact">
+                Contact Me <i class="icon fas fa-chevron-right"></i>
+              </a>
+              <a href="#section-skills" class="home-buttons__next">
+                <i class="icon fas fa-chevron-down"></i>
+              </a>
+            </div>
+          </section>
+
+          <!-- Skills Section -->
+          <section class="section skills" id="section-skills">
+            <h3 class="title">Coding Skills</h3>
+            <h4 class="subtitle">Developing on</h4>
+
+            <div class="skills-content">
+              <div class="skills-content_item">
+                <div class="skills-content_item__logo">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="skills-content_item__name">Languages</h4>
+                <div class="skills-content_item__desc">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS (SCSS)</li>
+                    <li>JavaScript, TypeScript (for browsers & Node.js)</li>
+                    <li>A little bit of Bash and Java</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="skills-content_item">
+                <div class="skills-content_item__logo">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="skills-content_item__name">
+                  Frameworks & Libraries
+                </h4>
+                <div class="skills-content_item__desc">
+                  <ul>
+                    <li>React</li>
+                    <li>Vue</li>
+                    <li>Mobx, Redux</li>
+                    <li>Axios</li>
+                    <li>Nuxt.js</li>
+                    <li>Next.js</li>
+                    <li>Ramda</li>
+                    <li>Express.js</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="skills-content_item">
+                <div class="skills-content_item__logo">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="skills-content_item__name">Design Tools</h4>
+                <div class="skills-content_item__desc">
+                  <ul>
+                    <li>Figma</li>
+                    <li>Material UI</li>
+                    <li>Storybook</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="skills-content_item">
+                <div class="skills-content_item__logo">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="skills-content_item__name">Testing</h4>
+                <div class="skills-content_item__desc">
+                  <ul>
+                    <li>Jest</li>
+                    <li>React Testing Library</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="skills-content_item">
+                <div class="skills-content_item__logo">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="skills-content_item__name">Bundlers</h4>
+                <ul>
+                  <li>Webpack</li>
+                  <li>Vite</li>
+                  <li>Parcel</li>
+                </ul>
+              </div>
+
+              <div class="skills-content_item">
+                <div class="skills-content_item__logo">
+                  <img src="" alt="" />
+                </div>
+                <h4 class="skills-content_item__name">Databases & Tools</h4>
+                <ul>
+                  <li>MySql</li>
+                  <li>GraphQl</li>
+                  <li>MicroORM</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="skills-other">
+              <h4>Other</h4>
+
+              <div class="skills-other_list">
+                <ul>
+                  <li>Docker</li>
+                  <li>Swagger</li>
+                  <li>Prettier, Beautify</li>
+                  <li>Git</li>
+                  <li>Jira, BitBucket, Confluence, Trello, Bamboo</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
