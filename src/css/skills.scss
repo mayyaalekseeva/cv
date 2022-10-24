@@ -5,6 +5,17 @@
     display: grid;
     box-sizing: border-box;
     grid-template-columns: 1fr 1fr 1fr;
+
+    &_item {
+      &__name {
+        font-size: 18px;
+      }
+
+      &__desc > ul {
+        padding-left: 20px;
+        margin-right: 30px;
+      }
+    }
   }
 
   &-other {
@@ -13,17 +24,8 @@
     justify-content: start;
     padding-right: 2em;
 
-    &_list > ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      padding: 0;
+    &_list {
       margin-left: 4em;
-
-      & > li {
-        margin: 20px;
-        max-width: 50px;
-      }
     }
   }
 }

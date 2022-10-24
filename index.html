@@ -32,7 +32,7 @@
                 <a href="/#section-skills">Coding Skills</a>
               </li>
               <li class="menu-list__item">
-                <a href="/#section-exp">Experience</a>
+                <a href="/#section-experience">Experience</a>
               </li>
               <li class="menu-list__item">
                 <a href="/#section-education">Education</a>
@@ -182,17 +182,75 @@
             </div>
 
             <div class="skills-other">
-              <h4>Other</h4>
+              <div class="subtitle">Other</div>
 
               <div class="skills-other_list">
-                <ul>
-                  <li>Docker</li>
-                  <li>Swagger</li>
-                  <li>Prettier, Beautify</li>
-                  <li>Git</li>
-                  <li>Jira, BitBucket, Confluence, Trello, Bamboo</li>
-                </ul>
+                <p>
+                  Docker, Swagger, Prettier, Beautify, Git, Jira, BitBucket,
+                  Confluence, Trello, Bamboo,
+                </p>
               </div>
+            </div>
+          </section>
+
+          <!-- Experience section -->
+          <section class="section experience" id="section-experience">
+            <div class="experience-title">
+              <h3 class="title">Experience</h3>
+              <h4 class="subtitle">Working with</h4>
+            </div>
+          </section>
+
+          <!-- Education section -->
+          <section class="section education" id="section-education">
+            <div class="education-title">
+              <h3 class="title">Education</h3>
+              <h4 class="subtitle">Studied at</h4>
+            </div>
+          </section>
+
+          <!-- Experience section -->
+          <section class="section contacts" id="section-contacts">
+            <div class="contacts-title">
+              <h3 class="title">Contacts</h3>
+              <h4 class="subtitle">Let's work together!</h4>
+            </div>
+
+            <div class="contacts-content">
+              <div class="contacts-content_form">
+                <form
+                  action="https>//formsubmit.io/send/"
+                  method="post"
+                  id="form"
+                >
+                  <div class="contacts-content_form__group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" />
+                  </div>
+                  <div class="contacts-content_form__group">
+                    <label for="email">Email Address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="your_email@domain.com"
+                    />
+                  </div>
+                  <div class="contacts-content_form__group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message"></textarea>
+                  </div>
+                  <div class="contacts-content_form__btns">
+                    <button type="submit">
+                      Send Message <i class="icon fas fa-chevron-right"></i>
+                    </button>
+                    <a href="#" class="contacts-content_form__btns___up">
+                      <i class="icon fas fa-chevron-up"></i>
+                    </a>
+                  </div>
+                </form>
+              </div>
+              <div class="contacts-content_info"></div>
             </div>
           </section>
         </div>
