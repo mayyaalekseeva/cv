@@ -9,6 +9,7 @@
     &_item {
       &__name {
         font-size: 18px;
+        color: variables.$mint;
       }
 
       &__desc > ul {
@@ -23,6 +24,14 @@
     align-items: center;
     justify-content: start;
     padding-right: 2em;
+
+    &_title {
+      font-size: 14px;
+      line-height: 1.2;
+      color: variables.$mint;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
 
     &_list {
       margin-left: 4em;

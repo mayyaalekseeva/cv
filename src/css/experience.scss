@@ -1,3 +1,46 @@
+@use "variables.scss" as variables;
+
 .experience {
   padding: 9em 2em;
+
+  &-content {
+    &_item {
+      padding-right: 30px;
+
+      &__company {
+        position: relative;
+        margin-bottom: 50px;
+
+        &___date {
+          position: absolute;
+          left: -8px;
+          top: -22px;
+          font-size: 11px;
+          color: variables.$mint;
+          font-weight: 600;
+          transform-origin: bottom left;
+          transform: rotate(90deg);
+        }
+
+        &___name {
+          margin: 0 0 30px 30px;
+          font-size: 18px;
+          color: variables.$white-text;
+          font-weight: 800;
+
+          & > a {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      &__description {
+        & > ul {
+          padding: 10px 0 0 16px;
+          margin: 0;
+        }
+      }
+    }
+  }
 }

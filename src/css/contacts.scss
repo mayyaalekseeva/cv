@@ -1,7 +1,7 @@
 @use "variables.scss" as variables;
 
 .contacts {
-  padding: 12em 2em 4em;
+  padding: 9em 2em 2em;
 
   &-title {
     margin-bottom: 60px;
@@ -26,13 +26,18 @@
         font-size: 14px;
         height: 64px;
         width: 80%;
-        color: #fff;
+        color: variables.$white-text;
         border: 1px solid variables.$light-grey;
         background-color: transparent;
         resize: none;
         outline: 0;
         border-radius: 30px;
         transition: all 0.3s ease 0s;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: variables.$mint;
       }
 
       textarea {
@@ -95,7 +100,7 @@
           & > li > span {
             font-weight: 600;
             text-transform: uppercase;
-            color: variables.$violet-hover;
+            color: variables.$mint;
           }
         }
       }
