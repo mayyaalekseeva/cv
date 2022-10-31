@@ -1,4 +1,5 @@
 @use "variables.scss" as variables;
+@use "mixins.scss" as mixins;
 
 @import "sections.scss";
 @import "header.scss";
@@ -23,8 +24,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 
 a {
@@ -70,14 +69,22 @@ p {
 
 h3 {
   margin: 30px 0 0 0;
+  line-height: 1.2em;
 }
 
 h4 {
   margin: 20px 0 30px 0;
+  line-height: 1.2em;
 }
 
 .container {
   margin: 0;
   position: relative;
   overflow: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }

@@ -1,4 +1,5 @@
 @use "variables.scss" as variables;
+@use "mixins.scss" as mixins;
 
 .header {
   padding: 0 50px;
@@ -14,11 +15,21 @@
   justify-content: space-between;
   align-items: center;
 
+  @include mixins.tablet {
+    background: transparent;
+    padding: 30px 30px;
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+    height: 90px;
+  }
+
   &-name {
     color: variables.$white-text;
     text-decoration: inherit;
     text-transform: uppercase;
     font-weight: 800;
+    font-size: 18px;
   }
 
   &-download-btn {
@@ -28,9 +39,15 @@
     min-width: 120px;
     margin-left: 40px;
     white-space: nowrap;
+    font-size: 12px;
+    height: fit-content;
 
     & > span {
       margin-right: 10px;
+    }
+
+    @include mixins.tablet {
+      display: none;
     }
   }
 }
@@ -38,7 +55,27 @@
 .menu {
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
+
+  .nav__active,
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: variables.$dark-gray;
+
+    &-container {
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+  }
 
   &-list {
     margin: 0;
@@ -47,9 +84,111 @@
     height: 80px;
     display: flex;
     align-items: center;
+    font-size: 12px;
 
     &__item {
       margin-left: 40px;
     }
+
+    @include mixins.tablet {
+      display: none;
+    }
+
+    .nav__active > & {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      & > li {
+        vertical-align: center;
+        width: 100%;
+        padding: 60px 0px;
+        margin: 0;
+        text-align: center;
+        height: max-content;
+        font-size: 30px;
+      }
+
+      & > li:hover {
+        background-color: variables.$light-grey;
+      }
+    }
+  }
+
+  &-burger {
+    display: none;
+
+    @include mixins.tablet {
+      display: flex;
+    }
+
+    &__btn {
+      position: relative;
+      padding: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 22px;
+        left: 20px;
+        right: 20px;
+        height: 2px;
+        background: #fff;
+        @include mixins.transition;
+      }
+
+      &:after {
+        top: auto;
+        bottom: 22px;
+      }
+
+      & > span {
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        right: 25px;
+        height: 2px;
+        background: #fff;
+        margin-top: -1px;
+        @include mixins.transition;
+      }
+
+      .burger__active > &:before {
+        opacity: 0;
+      }
+
+      .burger__active > &:after {
+        left: 20px;
+        bottom: 31px;
+        right: 17px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+      }
+
+      .burger__active > & > span {
+        left: 20px;
+        right: 17px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.scroll {
+  @include mixins.tablet {
+    background-color: variables.$light-grey;
+    top: 0;
+    @include mixins.transition;
   }
 }
