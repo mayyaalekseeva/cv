@@ -58,17 +58,19 @@
 
   .nav__active,
   .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-color: variables.$dark-gray;
-
-    &-container {
+    @include mixins.tablet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
       height: 100%;
-      margin: 0 auto;
+      background-color: variables.$dark-gray;
+
+      &-container {
+        height: 100%;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -95,21 +97,37 @@
     }
 
     .nav__active > & {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      height: 100%;
-      width: 100%;
+      @include mixins.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+      }
 
       & > li {
-        vertical-align: center;
-        width: 100%;
-        padding: 60px 0px;
-        margin: 0;
-        text-align: center;
-        height: max-content;
-        font-size: 30px;
+        @include mixins.tablet {
+          width: 100%;
+          padding: 60px 0px;
+          margin: 0;
+          text-align: center;
+          height: max-content;
+          font-size: 30px;
+          @include mixins.transition;
+        }
+
+        @include mixins.mobile {
+          padding: 0;
+
+          &:first-child {
+            padding-top: 40px;
+          }
+
+          &:last-child {
+            padding-bottom: 40px;
+          }
+        }
       }
 
       & > li:hover {

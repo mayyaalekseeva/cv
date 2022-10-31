@@ -17,11 +17,19 @@
     justify-content: start;
     flex-wrap: wrap;
 
+    @include mixins.mobile {
+      flex-direction: column;
+    }
+
     &_form {
       padding: 30px;
       border: 1px solid variables.$light-grey;
       border-radius: 30px;
       margin: 0 30px 30px 0;
+
+      @include mixins.mobile {
+        margin-right: 0;
+      }
 
       input,
       textarea {
@@ -38,6 +46,10 @@
         outline: 0;
         border-radius: 30px;
         transition: all 0.3s ease 0s;
+
+        @include mixins.mobile {
+          width: 100%;
+        }
       }
 
       input:focus,

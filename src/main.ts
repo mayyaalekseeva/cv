@@ -23,7 +23,6 @@ const nav = document.getElementById("nav");
 if (burger && nav) {
   burger.onclick = () => {
     burger.classList.toggle("burger__active");
-
     nav.classList.toggle("nav__active");
   };
 

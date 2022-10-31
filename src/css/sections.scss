@@ -29,6 +29,10 @@
       height: 40em;
     }
 
+    @include mixins.mobile {
+      height: 33em;
+    }
+
     &__img {
       background-image: url(../assets/maiia.jpg);
       position: absolute;
