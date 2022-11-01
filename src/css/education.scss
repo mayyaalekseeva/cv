@@ -1,3 +1,6 @@
+@use "variables.scss" as variables;
+@use "mixins.scss" as mixins;
+
 .education {
   padding: 9em 2em;
 
@@ -8,11 +11,16 @@
       border: 1px solid variables.$light-grey;
       border-radius: 30px;
       display: flex;
+      width: 100%;
+
+      @include mixins.mobile {
+        justify-content: space-between;
+      }
 
       &__company {
         position: relative;
-        width: 170px;
         margin-right: 30px;
+        width: 25%;
 
         &___date {
           position: absolute;
@@ -39,9 +47,9 @@
       }
 
       &__description {
-        & > ul {
-          padding: 10px 0 0 16px;
-          margin: 0;
+        @include mixins.mobile {
+          width: min-content;
+          margin-right: 20px;
         }
       }
     }

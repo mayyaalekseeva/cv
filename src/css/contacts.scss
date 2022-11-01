@@ -29,6 +29,8 @@
 
       @include mixins.mobile {
         margin-right: 0;
+        border: none;
+        padding: unset;
       }
 
       input,

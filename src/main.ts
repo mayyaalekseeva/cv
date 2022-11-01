@@ -1,6 +1,8 @@
 import "./css/style.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 
+//Header changes background on tablet width
+
 const header = document.getElementById("header")!;
 
 window.onscroll = () => {
@@ -16,6 +18,8 @@ window.onscroll = () => {
     }
   }
 };
+
+//Tablet burger menu
 
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
@@ -34,6 +38,15 @@ if (burger && nav) {
   });
 }
 
-// document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
+//Handle form
 
-// `;
+// const form: HTMLFormElement | null = document.querySelector("#form");
+
+// if (form) {
+//   const data = new FormData(form);
+//   const name = data.get('name');
+//   const email = data.get('email');
+//   const message = data.get('message')
+
+//   form.reset();
+// }
