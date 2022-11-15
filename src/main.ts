@@ -23,20 +23,25 @@ window.onscroll = () => {
 
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
-const body = document.body.classList;
+const body = document.body;
+let scrollPosition = 0; //Prevent scroll on iOS
 
 if (burger && nav) {
   burger.onclick = () => {
     burger.classList.toggle("burger__active");
     nav.classList.toggle("nav__active");
-    body.toggle("overflow");
+    scrollPosition = window.pageYOffset;
+    body.classList.toggle("overflow");
+    body.style.top = `-${scrollPosition}px`;
   };
 
   document.querySelectorAll(".menu-list__item a").forEach((item) => {
     item.addEventListener("click", () => {
       burger.classList.toggle("burger__active");
       nav.classList.toggle("nav__active");
-      body.toggle("overflow");
+      body.classList.toggle("overflow");
+      body.style.removeProperty("top");
+      window.scrollTo(0, scrollPosition);
     });
   });
 }
