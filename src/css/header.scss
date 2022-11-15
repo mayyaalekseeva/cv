@@ -104,7 +104,9 @@
         justify-content: space-around;
         align-items: center;
         height: 100%;
+        max-height: 600px;
         width: 100%;
+        padding-top: 50px;
       }
 
       & > li {
