@@ -27,10 +27,12 @@
       position: relative;
       width: 100%;
       height: 40em;
+      top: -53px;
     }
 
     @include mixins.mobile {
       height: 33em;
+      top: -25px;
     }
 
     &__img {
@@ -43,6 +45,10 @@
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
+
+      @include mixins.mobile {
+        top: -56px;
+      }
     }
   }
 

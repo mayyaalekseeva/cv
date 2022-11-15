@@ -40,7 +40,7 @@
         font-family: "Poppins";
         font-size: 14px;
         height: 64px;
-        width: 80%;
+        width: 100%;
         color: variables.$white-text;
         border: 1px solid variables.$light-grey;
         background-color: transparent;
@@ -61,6 +61,8 @@
 
       textarea {
         padding: 20px 20px;
+        overflow: hidden;
+        resize: none;
       }
 
       &__btns {

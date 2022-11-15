@@ -9,7 +9,7 @@
   top: 40px;
   height: 80px;
   z-index: 3;
-  background: #585d65;
+  background: variables.$light-grey;
   border-radius: 80px;
   display: flex;
   justify-content: space-between;
@@ -20,6 +20,7 @@
     padding: 30px 30px;
     width: 100%;
     left: 0;
+    top: 0;
     border-radius: 0;
     height: 90px;
   }

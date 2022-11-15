@@ -23,19 +23,34 @@ window.onscroll = () => {
 
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
+const body = document.body.classList;
 
 if (burger && nav) {
   burger.onclick = () => {
     burger.classList.toggle("burger__active");
     nav.classList.toggle("nav__active");
+    body.toggle("overflow");
   };
 
   document.querySelectorAll(".menu-list__item a").forEach((item) => {
     item.addEventListener("click", () => {
       burger.classList.toggle("burger__active");
       nav.classList.toggle("nav__active");
+      body.toggle("overflow");
     });
   });
+}
+
+//Handle textarea
+
+const textarea = document.querySelector("#message") as HTMLTextAreaElement;
+if (textarea) {
+  const autoResize = (el: HTMLTextAreaElement) => {
+    el.style.height = "auto";
+    el.style.height = el.scrollHeight + "px";
+  };
+
+  textarea.addEventListener("input", () => autoResize(textarea), false);
 }
 
 //Handle form
