@@ -24,27 +24,35 @@ window.onscroll = () => {
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
 const body = document.body;
-let scrollPosition = 0; //Prevent scroll on iOS
 
-if (burger && nav) {
-  burger.onclick = () => {
-    burger.classList.toggle("burger__active");
-    nav.classList.toggle("nav__active");
-    scrollPosition = window.pageYOffset;
-    body.classList.toggle("overflow");
-    body.style.top = `-${scrollPosition}px`;
-  };
+//Prevent scroll on iOS
+let scrollPosition = 0;
 
-  document.querySelectorAll(".menu-list__item a").forEach((item) => {
-    item.addEventListener("click", () => {
-      burger.classList.toggle("burger__active");
-      nav.classList.toggle("nav__active");
-      body.classList.toggle("overflow");
-      body.style.removeProperty("top");
-      window.scrollTo(0, scrollPosition);
-    });
-  });
-}
+const handleMenu = () => {
+  if (body.clientWidth < 1080) {
+    if (burger && nav) {
+      burger.onclick = () => {
+        burger.classList.toggle("burger__active");
+        nav.classList.toggle("nav__active");
+        scrollPosition = window.pageYOffset;
+        body.classList.toggle("overflow");
+        body.style.top = `-${scrollPosition}px`;
+      };
+
+      document.querySelectorAll(".menu-list__item a").forEach((item) => {
+        item.addEventListener("click", () => {
+          burger.classList.toggle("burger__active");
+          nav.classList.toggle("nav__active");
+          body.classList.toggle("overflow");
+          body.style.removeProperty("top");
+          window.scrollTo(0, scrollPosition);
+        });
+      });
+    }
+  }
+};
+
+window.addEventListener("resize", handleMenu);
 
 //Handle textarea
 
