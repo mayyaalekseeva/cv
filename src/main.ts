@@ -34,12 +34,10 @@ if (
   window.getComputedStyle(burger).display !== "none" &&
   body.clientWidth < 1080
 ) {
-  console.log(window.getComputedStyle(burger).display !== "none");
   burger.onclick = () => {
     burger.classList.toggle("burger__active");
     nav.classList.toggle("nav__active");
     scrollPosition = window.pageYOffset;
-    console.log({ scrollPosition });
     body.classList.toggle("overflow");
     body.style.top = `-${scrollPosition}px`;
   };
